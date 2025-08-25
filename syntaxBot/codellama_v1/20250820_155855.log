@@ -1,0 +1,10 @@
+[2025-08-20 15:58:56] INFO: Processing bfsp_AdditionalInfo.sql
+[2025-08-20 16:01:32] INFO: Model responded in 156.10s
+[2025-08-20 16:01:32] INFO: Report saved to C:\Users\bindrap\Documents\syntaxBot\SQL\SyntaxReports\bfsp_AdditionalInfo_report.md
+[2025-08-20 16:01:32] INFO: Processing bfsp_SubsidyPayment.sql
+[2025-08-20 16:03:17] INFO: Model responded in 105.61s
+[2025-08-20 16:03:17] INFO: Report saved to C:\Users\bindrap\Documents\syntaxBot\SQL\SyntaxReports\bfsp_SubsidyPayment_report.md
+[2025-08-20 16:03:17] INFO: Processing bfsp_UnderReview.sql
+[2025-08-20 16:08:04] INFO: Model responded in 287.07s
+[2025-08-20 16:08:05] INFO: Report saved to C:\Users\bindrap\Documents\syntaxBot\SQL\SyntaxReports\bfsp_UnderReview_report.md
+[2025-08-20 16:08:05] INFO: All files processed in 549.06s

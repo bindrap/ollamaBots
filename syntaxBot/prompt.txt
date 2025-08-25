@@ -1,0 +1,172 @@
+City Project SQL Process Rules (Cleaned Prompt)
+Additional Information Required (Process 34020 – Request Additional Information)
+
+Default Assigned User: Named user from the process that initiated, or the named user inserting ad-hoc.
+
+Inserted Automatically: When the ‘Request Additional Information’ attempt is saved in the ‘Application Received’ or ‘Under Review’ process, or manually added by a BackOffice user.
+
+Process Status: Additional Information Required
+
+Folder Status: Pending Additional Information
+
+Purpose: Communicate information needed to continue processing the application with the applicant.
+
+Additional Information Required Process (34024 – In Progress)
+
+Updates process and folder status to previous process status (In Progress).
+
+Request Information (23008)
+
+Validate that the Attempt Comment is not empty.
+
+Update Folder Status: Pending Additional Information
+
+Update Process Status: Pending Additional Information
+
+Send an email to the contact email (folder info) with the attempt comment.
+
+Removes the default assigned user.
+
+Information Received (23005)
+
+Update Process Status: Additional Information Submitted
+
+Default assigns the initiating user.
+
+Completed (23004)
+
+Update Process Status: Closed
+
+Set Process End Date: Current date
+
+Update Folder Status: Last status before additional information process
+
+Restore initiated process status to the last status before additional information attempt
+
+Set initiated process assigned user to the original assigned user.
+
+Cancelled (950)
+
+Validate Cancelled Reason is filled out
+
+Example reasons: Requested Additional Information not provided within 30 days
+
+Update Process & Folder Status: Cancelled
+
+Auto-close folder and set end dates
+
+Send notification email to applicant
+
+This process should behave like 'Communication' stays open and assigned to user.
+
+Under Review (34022)
+
+Default Assigned User: Programs Coordinator
+
+Process Status: In Progress
+
+Folder Status: Under Review
+
+Inserted When: ‘Ready for Review’ attempt added on Application Received process
+
+Status Codes:
+
+Cancelled (905)
+
+Update Folder Status: Cancelled
+
+Validate Cancelled Reason
+
+Update Process Status: Closed, set end date
+
+Email applicant
+
+In Progress (1220)
+
+Update Process Status: In Progress
+
+Folder Status: Under Review (unchanged)
+
+Approved (1)
+
+Validate: Any user can save this result
+
+Update Folder Status: Ready for Payment
+
+Update Process Status: Closed, set end date
+
+Insert 'Ready for Approval' process
+
+Process Right-of-Way fees (auto-bill)
+
+Enable ‘Continue’ button on Citizen portal
+
+On Hold (2025)
+
+Update Folder and Process Status: On Hold
+
+Keeps the process assigned to the team and user
+
+Additional Information Required (24051)
+
+Update Process Status: Pending Additional Information
+
+Update Folder Status: Pending Additional Information / Under Review
+
+Insert 'Additional Information Required' process
+
+Default assign: Team and named user who initiated the process
+
+Removes assigned team and user from this process
+
+Denied (3075)
+
+Validate Denied Reason is filled out
+
+Example: Not Eligible
+
+Update Folder Status: Denied
+
+Update Process Status: Closed, set end date
+
+Send notification email to applicant
+
+Subsidy Payment (34032 / 36020)
+
+Default Assigned User: Manager/Supervisor
+
+Process Status: Open
+
+Folder Status: Approved for Payment → Update to Completed after 8 weeks
+
+Integration: PeopleSoft update
+
+Inserted When:
+
+‘Approved’ attempt added on Subsidy Application Received process, or
+
+Daily batch job checks taxes; balance/due = $0
+
+Status Codes:
+
+Approved (1 – AP Stamped Completed on Miro)
+
+Auto assign to Permit Clerk
+
+Update Process Status: Open
+
+Update Folder Status: Approved for Payment (change to Completed after 8 weeks)
+
+Final Payment (275 – Payment Completed on Miro)
+
+Auto assign to Permit Clerk
+
+Update Folder Status: Approved for Payment → Completed
+
+Update Process Status: Closed
+
+Optional: Insert Control Group InfoCode for bulk upload
+
+Confirm PeopleSoft upload; auto-update folder status to ‘Payment Issued’
+
+Next steps: 4–6 weeks notification, remove after 8 weeks
